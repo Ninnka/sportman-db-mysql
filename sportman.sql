@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-03 22:09:03
+Date: 2017-02-04 17:14:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -109,7 +109,7 @@ CREATE TABLE `stadium` (
   `area` varchar(255) NOT NULL,
   `price` varchar(45) NOT NULL,
   `hostavatar` varchar(500) NOT NULL,
-  `totalscore` varchar(25) DEFAULT NULL,
+  `totalscore` varchar(25) DEFAULT '',
   `position` varchar(255) NOT NULL,
   `contact` varchar(255) NOT NULL,
   `tradedetail` longtext,
@@ -120,12 +120,12 @@ CREATE TABLE `stadium` (
 -- ----------------------------
 -- Records of stadium
 -- ----------------------------
-INSERT INTO `stadium` VALUES ('1', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '4', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
-INSERT INTO `stadium` VALUES ('2', '广州市射击射箭运动管理中心', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-stadium.png', '台球、射箭、射击', '08:00 - 19:00', '天河区', '199', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '2', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
-INSERT INTO `stadium` VALUES ('3', '杰冠真人CS野战基地', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/cs-stadium.png', '仿真枪机野战', '08:00 - 18:00', '海珠区', '299', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '1', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
-INSERT INTO `stadium` VALUES ('4', '大世界保龄球馆', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/bowling-stadium.png', '保龄球', '08:00 - 22:00', '海珠区', '99', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '3.5', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
-INSERT INTO `stadium` VALUES ('5', '冰河湾真冰溜冰场', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-stadium.png', '溜冰', '08:00 - 22:00', '海珠区', '39', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '5', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
-INSERT INTO `stadium` VALUES ('6', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '2.5', '广州市海珠区万寿素社街48号', '12345678910', null, '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('1', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '4', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('2', '广州市射击射箭运动管理中心', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-stadium.png', '台球、射箭、射击', '08:00 - 19:00', '天河区', '199', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '2', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('3', '杰冠真人CS野战基地', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/cs-stadium.png', '仿真枪机野战', '08:00 - 18:00', '海珠区', '299', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '1', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('4', '大世界保龄球馆', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/bowling-stadium.png', '保龄球', '08:00 - 22:00', '海珠区', '99', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '3.5', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('5', '冰河湾真冰溜冰场', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-stadium.png', '溜冰', '08:00 - 22:00', '海珠区', '39', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '5', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('6', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '2.5', '广州市海珠区万寿素社街48号', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
 
 -- ----------------------------
 -- Table structure for stadium_equipment
@@ -164,7 +164,7 @@ INSERT INTO `stadium_equipment` VALUES ('13', '5', '大厅乒乓球', '双鱼座
 INSERT INTO `stadium_equipment` VALUES ('14', '5', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
 INSERT INTO `stadium_equipment` VALUES ('15', '5', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
 INSERT INTO `stadium_equipment` VALUES ('16', '6', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('17', '6', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('17', '6', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '9');
 INSERT INTO `stadium_equipment` VALUES ('18', '6', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
 INSERT INTO `stadium_equipment` VALUES ('19', '7', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '1');
 INSERT INTO `stadium_equipment` VALUES ('20', '8', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '2');
@@ -371,22 +371,32 @@ CREATE TABLE `user_payment_stadium` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_stadium` int(11) NOT NULL,
+  `id_trade` int(11) NOT NULL,
+  `id_equipment` int(11) NOT NULL,
+  `quantity` varchar(255) NOT NULL,
+  `totalprice` varchar(255) NOT NULL,
   `status` varchar(45) NOT NULL,
   `timestamp` varchar(255) NOT NULL,
+  `remark` varchar(500) DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
   KEY `id_stadium` (`id_stadium`) USING BTREE,
+  KEY `id_trade` (`id_trade`) USING BTREE,
+  KEY `id_equipment` (`id_equipment`) USING BTREE,
+  CONSTRAINT `ref_user_payment_stadium_col_id_equipment` FOREIGN KEY (`id_equipment`) REFERENCES `stadium_equipment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ref_user_payment_stadium_col_id_trade` FOREIGN KEY (`id_trade`) REFERENCES `stadium_tradedetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_payment_stadium
 -- ----------------------------
-INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '待付款', '1485916840000');
-INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '已付款', '1485830440000');
-INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '已取消', '1485830440000');
-INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '待付款', '1486110130101');
+INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '1', '1', '2', '20', '待付款', '1485916840000', '');
+INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '1', '1', '3', '30', '已付款', '1485830440000', '');
+INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '1', '1', '4', '39', '已取消', '1485830440000', '');
+INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '1', '1', '5', '48', '待付款', '1486110130101', '');
+INSERT INTO `user_payment_stadium` VALUES ('5', '1', '1', '7', '19', '1', '20', '已取消', '1486197364675', '');
 
 -- ----------------------------
 -- Table structure for user_review
