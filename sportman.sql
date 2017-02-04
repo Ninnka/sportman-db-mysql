@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-04 17:14:27
+Date: 2017-02-04 23:04:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -139,7 +139,7 @@ CREATE TABLE `stadium_equipment` (
   `geology` varchar(500) DEFAULT NULL,
   `position` varchar(500) NOT NULL,
   `price` varchar(45) NOT NULL,
-  `remain` varchar(45) NOT NULL,
+  `total` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_stadium_tradedetail` (`id_stadium_tradedetail`) USING BTREE,
   CONSTRAINT `ref_stadium_equipment_col_id_stadium_tradedetail` FOREIGN KEY (`id_stadium_tradedetail`) REFERENCES `stadium_tradedetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -166,7 +166,7 @@ INSERT INTO `stadium_equipment` VALUES ('15', '5', '混合乒乓球', '双鱼座
 INSERT INTO `stadium_equipment` VALUES ('16', '6', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
 INSERT INTO `stadium_equipment` VALUES ('17', '6', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '9');
 INSERT INTO `stadium_equipment` VALUES ('18', '6', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('19', '7', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '1');
+INSERT INTO `stadium_equipment` VALUES ('19', '7', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '5');
 INSERT INTO `stadium_equipment` VALUES ('20', '8', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '2');
 INSERT INTO `stadium_equipment` VALUES ('21', '9', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '3');
 INSERT INTO `stadium_equipment` VALUES ('22', '10', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '4');
@@ -375,6 +375,8 @@ CREATE TABLE `user_payment_stadium` (
   `id_equipment` int(11) NOT NULL,
   `quantity` varchar(255) NOT NULL,
   `totalprice` varchar(255) NOT NULL,
+  `bookstarttime` varchar(255) NOT NULL,
+  `bookendtime` varchar(255) NOT NULL,
   `status` varchar(45) NOT NULL,
   `timestamp` varchar(255) NOT NULL,
   `remark` varchar(500) DEFAULT '',
@@ -392,11 +394,11 @@ CREATE TABLE `user_payment_stadium` (
 -- ----------------------------
 -- Records of user_payment_stadium
 -- ----------------------------
-INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '1', '1', '2', '20', '待付款', '1485916840000', '');
-INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '1', '1', '3', '30', '已付款', '1485830440000', '');
-INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '1', '1', '4', '39', '已取消', '1485830440000', '');
-INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '1', '1', '5', '48', '待付款', '1486110130101', '');
-INSERT INTO `user_payment_stadium` VALUES ('5', '1', '1', '7', '19', '1', '20', '已取消', '1486197364675', '');
+INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '待付款', '1485916840000', '');
+INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '1', '1', '3', '30', '1485820800000', '1485835200000', '已付款', '1485830440000', '');
+INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '1', '1', '4', '39', '1485820800000', '1485835200000', '已取消', '1485830440000', '');
+INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '1', '1', '5', '48', '1485820800000', '1485835200000', '待付款', '1486110130101', '');
+INSERT INTO `user_payment_stadium` VALUES ('5', '1', '1', '7', '19', '1', '20', '1485820800000', '1485835200000', '已取消', '1486197364675', '');
 
 -- ----------------------------
 -- Table structure for user_review
