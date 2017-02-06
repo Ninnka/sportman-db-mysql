@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-04 23:04:01
+Date: 2017-02-06 23:16:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,6 +66,36 @@ CREATE TABLE `activity_banner` (
 INSERT INTO `activity_banner` VALUES ('1', 'http://ok7pzw2ak.bkt.clouddn.com/shot-star.png', '2');
 INSERT INTO `activity_banner` VALUES ('2', 'http://ok7pzw2ak.bkt.clouddn.com/skip-star.png', '3');
 INSERT INTO `activity_banner` VALUES ('3', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-star.png', '5');
+
+-- ----------------------------
+-- Table structure for activity_regulartion
+-- ----------------------------
+DROP TABLE IF EXISTS `activity_regulartion`;
+CREATE TABLE `activity_regulartion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_activity` int(11) NOT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  `title` longtext,
+  `content` longtext,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_activity_` (`id_activity`),
+  CONSTRAINT `ref_activity_regulartion_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of activity_regulartion
+-- ----------------------------
+INSERT INTO `activity_regulartion` VALUES ('1', '1', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
+INSERT INTO `activity_regulartion` VALUES ('2', '1', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
+INSERT INTO `activity_regulartion` VALUES ('3', '2', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
+INSERT INTO `activity_regulartion` VALUES ('4', '2', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
+INSERT INTO `activity_regulartion` VALUES ('5', '3', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
+INSERT INTO `activity_regulartion` VALUES ('6', '3', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
+INSERT INTO `activity_regulartion` VALUES ('7', '4', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
+INSERT INTO `activity_regulartion` VALUES ('8', '4', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
+INSERT INTO `activity_regulartion` VALUES ('9', '5', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
+INSERT INTO `activity_regulartion` VALUES ('10', '5', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
 
 -- ----------------------------
 -- Table structure for search_activity_hot
@@ -410,24 +440,26 @@ CREATE TABLE `user_review` (
   `id_activity` int(11) DEFAULT NULL,
   `id_stadium` int(11) DEFAULT NULL,
   `review` longtext,
-  `status` varchar(45) NOT NULL,
   `score` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
   KEY `id_activity` (`id_activity`) USING BTREE,
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_user_review_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_review
 -- ----------------------------
-INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '已评价', '4');
-INSERT INTO `user_review` VALUES ('2', '1', '2', null, null, '未评价', '');
-INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '已评价', '3');
-INSERT INTO `user_review` VALUES ('4', '1', null, '2', null, '未评价', '');
+INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4');
+INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5');
+INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3');
+INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5');
+INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5');
+INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5');
 
 -- ----------------------------
 -- Table structure for user_stadium
