@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-08 23:57:54
+Date: 2017-02-10 00:11:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,7 +48,7 @@ INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt
 INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '1485139399979', '20', '1', '广州体育局', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '0', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '3', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '8', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
 
 -- ----------------------------
 -- Table structure for activity_banner
@@ -169,6 +169,7 @@ INSERT INTO `stadium` VALUES ('6', '胜利运动场（万寿路店）', 'http://
 DROP TABLE IF EXISTS `stadium_equipment`;
 CREATE TABLE `stadium_equipment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_stadium` int(11) NOT NULL,
   `id_stadium_tradedetail` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `device` varchar(500) DEFAULT NULL,
@@ -178,36 +179,38 @@ CREATE TABLE `stadium_equipment` (
   `total` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_stadium_tradedetail` (`id_stadium_tradedetail`) USING BTREE,
+  KEY `id_stadium` (`id_stadium`) USING BTREE,
+  CONSTRAINT `ref_stadium_equipment_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_stadium_equipment_col_id_stadium_tradedetail` FOREIGN KEY (`id_stadium_tradedetail`) REFERENCES `stadium_tradedetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stadium_equipment
 -- ----------------------------
-INSERT INTO `stadium_equipment` VALUES ('1', '1', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('2', '1', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
-INSERT INTO `stadium_equipment` VALUES ('3', '1', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('4', '2', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('5', '2', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
-INSERT INTO `stadium_equipment` VALUES ('6', '2', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('7', '3', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('8', '3', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
-INSERT INTO `stadium_equipment` VALUES ('9', '3', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('10', '4', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('11', '4', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
-INSERT INTO `stadium_equipment` VALUES ('12', '4', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('13', '5', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('14', '5', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
-INSERT INTO `stadium_equipment` VALUES ('15', '5', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('16', '6', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
-INSERT INTO `stadium_equipment` VALUES ('17', '6', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '9');
-INSERT INTO `stadium_equipment` VALUES ('18', '6', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
-INSERT INTO `stadium_equipment` VALUES ('19', '7', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '5');
-INSERT INTO `stadium_equipment` VALUES ('20', '8', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '2');
-INSERT INTO `stadium_equipment` VALUES ('21', '9', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '3');
-INSERT INTO `stadium_equipment` VALUES ('22', '10', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '4');
-INSERT INTO `stadium_equipment` VALUES ('23', '11', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '5');
-INSERT INTO `stadium_equipment` VALUES ('24', '12', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '6');
+INSERT INTO `stadium_equipment` VALUES ('1', '1', '1', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('2', '1', '1', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('3', '1', '1', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('4', '2', '2', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('5', '2', '2', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('6', '2', '2', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('7', '3', '3', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('8', '3', '3', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('9', '3', '3', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('10', '4', '4', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('11', '4', '4', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('12', '4', '4', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('13', '5', '5', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('14', '5', '5', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '8');
+INSERT INTO `stadium_equipment` VALUES ('15', '5', '5', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('16', '6', '6', '大厅乒乓球', '双鱼座化工板质球桌', '水泥地板', '运动场大厅', '19', '6');
+INSERT INTO `stadium_equipment` VALUES ('17', '6', '6', '露天乒乓球', '双喜化工板质球桌', '水泥地板', '露天运动广场', '9', '9');
+INSERT INTO `stadium_equipment` VALUES ('18', '6', '6', '混合乒乓球', '双鱼座化工板质球桌', '塑料地板', '运动场大厅', '5', '4');
+INSERT INTO `stadium_equipment` VALUES ('19', '1', '7', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '5');
+INSERT INTO `stadium_equipment` VALUES ('20', '2', '8', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '2');
+INSERT INTO `stadium_equipment` VALUES ('21', '3', '9', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '3');
+INSERT INTO `stadium_equipment` VALUES ('22', '4', '10', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '4');
+INSERT INTO `stadium_equipment` VALUES ('23', '5', '11', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '5');
+INSERT INTO `stadium_equipment` VALUES ('24', '6', '12', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '6');
 
 -- ----------------------------
 -- Table structure for stadium_tradedetail
@@ -287,26 +290,25 @@ CREATE TABLE `user_activity` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_activity` int(11) NOT NULL,
+  `id_payment` int(11) NOT NULL,
   `registertime` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
   KEY `id_activity` (`id_activity`) USING BTREE,
+  KEY `id_payment` (`id_payment`) USING BTREE,
   CONSTRAINT `ref_user_activity_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ref_user_activity_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity
 -- ----------------------------
-INSERT INTO `user_activity` VALUES ('1', '1', '3', '1485302400000', '审核中');
-INSERT INTO `user_activity` VALUES ('2', '8', '4', '1485302400000', '待举行');
-INSERT INTO `user_activity` VALUES ('3', '7', '2', '1485302400000', '审核中');
-INSERT INTO `user_activity` VALUES ('4', '1', '4', '1485302400000', '已结束');
-INSERT INTO `user_activity` VALUES ('5', '11', '1', '1485302400000', '待举行');
-INSERT INTO `user_activity` VALUES ('6', '7', '4', '1485302400000', '已结束');
-INSERT INTO `user_activity` VALUES ('7', '1', '5', '1485302400000', '待举行');
-INSERT INTO `user_activity` VALUES ('8', '1', '1', '1485302400000', '已结束');
+INSERT INTO `user_activity` VALUES ('1', '1', '3', '5', '1485302400000', '审核中');
+INSERT INTO `user_activity` VALUES ('4', '1', '4', '6', '1485302400000', '已结束');
+INSERT INTO `user_activity` VALUES ('8', '1', '1', '1', '1485302400000', '待举行');
+INSERT INTO `user_activity` VALUES ('13', '1', '5', '8', '148664234531', '审核中');
 
 -- ----------------------------
 -- Table structure for user_activity_recommend
@@ -344,12 +346,16 @@ CREATE TABLE `user_activity_star` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_activity_star_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_star_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity_star
 -- ----------------------------
 INSERT INTO `user_activity_star` VALUES ('1', '1', '1');
+INSERT INTO `user_activity_star` VALUES ('2', '1', '2');
+INSERT INTO `user_activity_star` VALUES ('3', '1', '3');
+INSERT INTO `user_activity_star` VALUES ('4', '1', '4');
+INSERT INTO `user_activity_star` VALUES ('5', '1', '5');
 
 -- ----------------------------
 -- Table structure for user_history
@@ -386,18 +392,16 @@ CREATE TABLE `user_payment_activity` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_payment_activity_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_activity_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_payment_activity
 -- ----------------------------
 INSERT INTO `user_payment_activity` VALUES ('1', '1', '1', '待付款', '1485916840000');
 INSERT INTO `user_payment_activity` VALUES ('2', '1', '2', '已付款', '1485830440000');
-INSERT INTO `user_payment_activity` VALUES ('3', '7', '2', '待付款', '1485916840000');
-INSERT INTO `user_payment_activity` VALUES ('4', '7', '3', '已付款', '1485830440000');
 INSERT INTO `user_payment_activity` VALUES ('5', '1', '3', '待付款', '1485916840000');
 INSERT INTO `user_payment_activity` VALUES ('6', '1', '4', '已取消', '1485830440000');
-INSERT INTO `user_payment_activity` VALUES ('7', '1', '5', '已取消', '1485830440000');
+INSERT INTO `user_payment_activity` VALUES ('8', '1', '5', '待付款', '148664234531');
 
 -- ----------------------------
 -- Table structure for user_payment_stadium
@@ -426,7 +430,7 @@ CREATE TABLE `user_payment_stadium` (
   CONSTRAINT `ref_user_payment_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_trade` FOREIGN KEY (`id_trade`) REFERENCES `stadium_tradedetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_payment_stadium
@@ -436,6 +440,7 @@ INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '1', '2', '3', '30', '
 INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '1', '3', '4', '39', '1485820800000', '1485835200000', '已取消', '1485830440000', '');
 INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '1', '4', '5', '48', '1485820800000', '1485835200000', '待付款', '1486110130101', '');
 INSERT INTO `user_payment_stadium` VALUES ('5', '1', '1', '7', '19', '1', '20', '1485820800000', '1485835200000', '已取消', '1486197364675', '');
+INSERT INTO `user_payment_stadium` VALUES ('9', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '待付款', '1486643232629', '');
 
 -- ----------------------------
 -- Table structure for user_review
@@ -489,7 +494,7 @@ CREATE TABLE `user_stadium` (
   CONSTRAINT `ref_user_stadium_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium
@@ -499,6 +504,7 @@ INSERT INTO `user_stadium` VALUES ('4', '1', '3', '3', '1485302400000', '已使�
 INSERT INTO `user_stadium` VALUES ('8', '1', '4', '4', '1485302400000', '已使用');
 INSERT INTO `user_stadium` VALUES ('9', '1', '1', '1', '1485302400000', '已使用');
 INSERT INTO `user_stadium` VALUES ('10', '1', '1', '5', '1485302700000', '待使用');
+INSERT INTO `user_stadium` VALUES ('13', '1', '1', '9', '1486643232629', '待使用');
 
 -- ----------------------------
 -- Table structure for user_stadium_recommend
