@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-10 00:11:47
+Date: 2017-02-12 23:52:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -453,6 +453,7 @@ CREATE TABLE `user_review` (
   `id_stadium` int(11) DEFAULT NULL,
   `review` longtext,
   `score` varchar(45) NOT NULL,
+  `status` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
@@ -466,14 +467,14 @@ CREATE TABLE `user_review` (
 -- ----------------------------
 -- Records of user_review
 -- ----------------------------
-INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4');
-INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5');
-INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3');
-INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5');
-INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5');
-INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5');
-INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4');
-INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5');
+INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4', '已评价');
+INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5', '已评价');
+INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3', '已评价');
+INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5', '已评价');
+INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5', '已评价');
+INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5', '已评价');
+INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4', '已评价');
+INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5', '已评价');
 
 -- ----------------------------
 -- Table structure for user_stadium
