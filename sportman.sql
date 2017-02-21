@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-12 23:52:03
+Date: 2017-02-21 23:59:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,7 +44,7 @@ CREATE TABLE `activity` (
 -- ----------------------------
 -- Records of activity
 -- ----------------------------
-INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '海珠区', '花城广场（起点）', '100', '1485139399979', '30', '12', '广州体育局', '广州市天河区天河路299号天河体育中心', '1', '1', '1', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '海珠区', '花城广场（起点）', '100', '1485139399979', '30', '12', '广州体育局', '广州市天河区天河路299号天河体育中心', '1', '-7', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '1485139399979', '20', '1', '广州体育局', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '0', '1', '12345678910', 'www.gzmarathon.com');
@@ -267,7 +267,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'a', 'pwd', 'spmid_a', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@qq.com', '665396', '中国', '1485060433587');
+INSERT INTO `user` VALUES ('1', 'a', 'pwd', 'spmid_a', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
 INSERT INTO `user` VALUES ('7', 'b', 'pwd', 'spmid_b', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
 INSERT INTO `user` VALUES ('8', 'c', 'pwd', 'spmid_c', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
 INSERT INTO `user` VALUES ('9', 'd', 'pwd', 'spmid_d', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
@@ -323,15 +323,15 @@ CREATE TABLE `user_activity_recommend` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_activity_recommend_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_recommend_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity_recommend
 -- ----------------------------
-INSERT INTO `user_activity_recommend` VALUES ('1', '1', '1');
 INSERT INTO `user_activity_recommend` VALUES ('2', '7', '3');
-INSERT INTO `user_activity_recommend` VALUES ('3', '1', '2');
 INSERT INTO `user_activity_recommend` VALUES ('5', '1', '5');
+INSERT INTO `user_activity_recommend` VALUES ('7', '1', '1');
+INSERT INTO `user_activity_recommend` VALUES ('8', '1', '2');
 
 -- ----------------------------
 -- Table structure for user_activity_star
@@ -346,16 +346,16 @@ CREATE TABLE `user_activity_star` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_activity_star_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_star_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity_star
 -- ----------------------------
-INSERT INTO `user_activity_star` VALUES ('1', '1', '1');
 INSERT INTO `user_activity_star` VALUES ('2', '1', '2');
 INSERT INTO `user_activity_star` VALUES ('3', '1', '3');
 INSERT INTO `user_activity_star` VALUES ('4', '1', '4');
 INSERT INTO `user_activity_star` VALUES ('5', '1', '5');
+INSERT INTO `user_activity_star` VALUES ('8', '1', '1');
 
 -- ----------------------------
 -- Table structure for user_history
@@ -365,6 +365,7 @@ CREATE TABLE `user_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `action` varchar(45) NOT NULL,
+  `theme` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
@@ -374,8 +375,8 @@ CREATE TABLE `user_history` (
 -- ----------------------------
 -- Records of user_history
 -- ----------------------------
-INSERT INTO `user_history` VALUES ('1', '1', '参加活动', '1485314400000');
-INSERT INTO `user_history` VALUES ('2', '1', '预定场馆', '1485760291350');
+INSERT INTO `user_history` VALUES ('1', '1', '参加活动', '白云山野战场畅玩', '1485314400000');
+INSERT INTO `user_history` VALUES ('2', '1', '预定场馆', '广州市射击射箭运动管理中心', '1485760291350');
 
 -- ----------------------------
 -- Table structure for user_payment_activity
@@ -453,7 +454,6 @@ CREATE TABLE `user_review` (
   `id_stadium` int(11) DEFAULT NULL,
   `review` longtext,
   `score` varchar(45) NOT NULL,
-  `status` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
@@ -467,14 +467,14 @@ CREATE TABLE `user_review` (
 -- ----------------------------
 -- Records of user_review
 -- ----------------------------
-INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4', '已评价');
-INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5', '已评价');
-INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3', '已评价');
-INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5', '已评价');
-INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5', '已评价');
-INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5', '已评价');
-INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4', '已评价');
-INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5', '已评价');
+INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4');
+INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5');
+INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3');
+INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5');
+INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5');
+INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5');
+INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4');
+INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5');
 
 -- ----------------------------
 -- Table structure for user_stadium
@@ -520,13 +520,13 @@ CREATE TABLE `user_stadium_recommend` (
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_user_stadium_recommend_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_recommend_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium_recommend
 -- ----------------------------
-INSERT INTO `user_stadium_recommend` VALUES ('1', '1', '1');
 INSERT INTO `user_stadium_recommend` VALUES ('2', '1', '2');
+INSERT INTO `user_stadium_recommend` VALUES ('6', '1', '1');
 
 -- ----------------------------
 -- Table structure for user_stadium_star
@@ -541,11 +541,11 @@ CREATE TABLE `user_stadium_star` (
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_user_stadium_star_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_star_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium_star
 -- ----------------------------
-INSERT INTO `user_stadium_star` VALUES ('1', '1', '1');
 INSERT INTO `user_stadium_star` VALUES ('2', '1', '2');
+INSERT INTO `user_stadium_star` VALUES ('3', '1', '1');
 SET FOREIGN_KEY_CHECKS=1;
