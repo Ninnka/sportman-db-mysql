@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-21 23:59:09
+Date: 2017-02-22 23:52:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,7 +48,7 @@ INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt
 INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '1485139399979', '20', '1', '广州体育局', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '0', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '8', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
 
 -- ----------------------------
 -- Table structure for activity_banner
@@ -99,6 +99,34 @@ INSERT INTO `activity_regulartion` VALUES ('7', '4', '1', 'Race Events', 'Marath
 INSERT INTO `activity_regulartion` VALUES ('8', '4', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
 INSERT INTO `activity_regulartion` VALUES ('9', '5', '1', 'Race Events', 'Marathon (42.195 km) 2. Half Marathon (21.0975 km) 3. Mini Marathon (5 km) ');
 INSERT INTO `activity_regulartion` VALUES ('10', '5', '2', 'Race Course', 'Mini Marathon:\nHuacheng Square (Starting Point) → Linjiang Ave (Eastwards) → Tunnel →Linjiang Ave (Westwards) → Guangzhou Middle Ave.→ Tianhe North Rd. → North Gate, Tianhe Sports Center → Ring Road of Tianhe Stadium →South Gate Square, Tianhe Sports Center (Finishing Point)\n(II) Half Marathon\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → Intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Reserve Direction) → U turn at Yuejiang Rd (under Pazhou Bridge) → Yuejiang Middle Rd (North to the Poly International Plaza, Finishing Point)\n(III) Marathon:\nHuacheng Square (Starting point) → Linjiang Ave (Eastwards) → U turn at Chebei South Rd. → Linjiang Ave. (Westwards) → Liede Ave → U turn at the top of Huacheng Ave Tunnel. → Liede Bridge →Yuejiang Rd. (Eastwards) → U turn at the intersection of Yuejiang Rd. and Huizhan Middle Rd. → Yuejiang Rd (Westwards) → Binjiang East Rd. → U turn at Binjiang Rd. → Binjiang Rd → Yiyuan Rd. → Yizhou Rd. → Binjiang Rd (Westwards) → Hongde Rd. (Southwards) → People Bridge → Yanjiang Rd. (Eastwards) → Datong Rd. (Eastwards) → Tanyue Street → Qingbo Rd. → Hai Xin Sha → No. 1 Bridge of Hai Xin Sha → Linjiang Ave. → Huacheng Square (Finishing Point)');
+
+-- ----------------------------
+-- Table structure for activity_reviewfeature
+-- ----------------------------
+DROP TABLE IF EXISTS `activity_reviewfeature`;
+CREATE TABLE `activity_reviewfeature` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_activity` int(11) NOT NULL,
+  `feature` longtext NOT NULL,
+  `agree` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_activity` (`id_activity`) USING BTREE,
+  CONSTRAINT `ref_activity_reviewfeature_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of activity_reviewfeature
+-- ----------------------------
+INSERT INTO `activity_reviewfeature` VALUES ('1', '1', '场地干净', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('2', '1', '服务态度好', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('3', '1', '环境不错', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('4', '1', '位置好找', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('5', '1', '交通方便', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('6', '1', '停车方便', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('7', '1', '场地新', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('8', '1', '性价比高', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('9', '1', '停车方便', '1');
 
 -- ----------------------------
 -- Table structure for search_activity_hot
@@ -213,6 +241,34 @@ INSERT INTO `stadium_equipment` VALUES ('23', '5', '11', '露天羽毛球', '尤
 INSERT INTO `stadium_equipment` VALUES ('24', '6', '12', '露天羽毛球', '尤尼吉斯网', '普通地板', '运动场大厅', '39', '6');
 
 -- ----------------------------
+-- Table structure for stadium_reviewfeature
+-- ----------------------------
+DROP TABLE IF EXISTS `stadium_reviewfeature`;
+CREATE TABLE `stadium_reviewfeature` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_stadium` int(11) NOT NULL,
+  `feature` longtext NOT NULL,
+  `agree` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_stadium` (`id_stadium`) USING BTREE,
+  CONSTRAINT `ref_stadium_reviewfeature_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of stadium_reviewfeature
+-- ----------------------------
+INSERT INTO `stadium_reviewfeature` VALUES ('1', '1', '场地干净', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('2', '1', '服务态度好', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('3', '1', '环境不错', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('4', '1', '位置好找', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('5', '1', '交通方便', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('6', '1', '停车方便', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('7', '1', '场地新', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('8', '1', '性价比高', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('9', '1', '停车方便', '1');
+
+-- ----------------------------
 -- Table structure for stadium_tradedetail
 -- ----------------------------
 DROP TABLE IF EXISTS `stadium_tradedetail`;
@@ -300,7 +356,7 @@ CREATE TABLE `user_activity` (
   CONSTRAINT `ref_user_activity_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity
@@ -308,7 +364,8 @@ CREATE TABLE `user_activity` (
 INSERT INTO `user_activity` VALUES ('1', '1', '3', '5', '1485302400000', '审核中');
 INSERT INTO `user_activity` VALUES ('4', '1', '4', '6', '1485302400000', '已结束');
 INSERT INTO `user_activity` VALUES ('8', '1', '1', '1', '1485302400000', '待举行');
-INSERT INTO `user_activity` VALUES ('13', '1', '5', '8', '148664234531', '审核中');
+INSERT INTO `user_activity` VALUES ('17', '1', '5', '7', '1487727311390', '审核中');
+INSERT INTO `user_activity` VALUES ('18', '1', '2', '2', '1487727311390', '待举行');
 
 -- ----------------------------
 -- Table structure for user_activity_recommend
@@ -370,13 +427,17 @@ CREATE TABLE `user_history` (
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
   CONSTRAINT `ref_user_history_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_history
 -- ----------------------------
 INSERT INTO `user_history` VALUES ('1', '1', '参加活动', '白云山野战场畅玩', '1485314400000');
 INSERT INTO `user_history` VALUES ('2', '1', '预定场馆', '广州市射击射箭运动管理中心', '1485760291350');
+INSERT INTO `user_history` VALUES ('3', '1', '参加活动', '轮荧光夜跑', '1487727311390');
+INSERT INTO `user_history` VALUES ('4', '1', '取消参加活动', '轮荧光夜跑', '1487816610000');
+INSERT INTO `user_history` VALUES ('5', '1', '预定场馆', '胜利运动场（万寿路店）', '1487727717863');
+INSERT INTO `user_history` VALUES ('6', '1', '取消预定场馆', '胜利运动场（万寿路店）', '1487728494722');
 
 -- ----------------------------
 -- Table structure for user_payment_activity
@@ -393,16 +454,16 @@ CREATE TABLE `user_payment_activity` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_payment_activity_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_activity_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_payment_activity
 -- ----------------------------
 INSERT INTO `user_payment_activity` VALUES ('1', '1', '1', '待付款', '1485916840000');
 INSERT INTO `user_payment_activity` VALUES ('2', '1', '2', '已付款', '1485830440000');
-INSERT INTO `user_payment_activity` VALUES ('5', '1', '3', '待付款', '1485916840000');
+INSERT INTO `user_payment_activity` VALUES ('5', '1', '3', '已付款', '1485916840000');
 INSERT INTO `user_payment_activity` VALUES ('6', '1', '4', '已取消', '1485830440000');
-INSERT INTO `user_payment_activity` VALUES ('8', '1', '5', '待付款', '148664234531');
+INSERT INTO `user_payment_activity` VALUES ('7', '1', '5', '已取消', '1487727311390');
 
 -- ----------------------------
 -- Table structure for user_payment_stadium
@@ -431,17 +492,18 @@ CREATE TABLE `user_payment_stadium` (
   CONSTRAINT `ref_user_payment_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_trade` FOREIGN KEY (`id_trade`) REFERENCES `stadium_tradedetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_payment_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_payment_stadium
 -- ----------------------------
-INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '待付款', '1485916840000', '');
+INSERT INTO `user_payment_stadium` VALUES ('1', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '已付款', '1485916840000', '');
 INSERT INTO `user_payment_stadium` VALUES ('2', '1', '2', '1', '2', '3', '30', '1485820800000', '1485835200000', '已付款', '1485830440000', '');
 INSERT INTO `user_payment_stadium` VALUES ('3', '1', '3', '1', '3', '4', '39', '1485820800000', '1485835200000', '已取消', '1485830440000', '');
 INSERT INTO `user_payment_stadium` VALUES ('4', '1', '4', '1', '4', '5', '48', '1485820800000', '1485835200000', '待付款', '1486110130101', '');
 INSERT INTO `user_payment_stadium` VALUES ('5', '1', '1', '7', '19', '1', '20', '1485820800000', '1485835200000', '已取消', '1486197364675', '');
-INSERT INTO `user_payment_stadium` VALUES ('9', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '待付款', '1486643232629', '');
+INSERT INTO `user_payment_stadium` VALUES ('9', '1', '1', '1', '1', '2', '20', '1485820800000', '1485835200000', '已付款', '1486643232629', '');
+INSERT INTO `user_payment_stadium` VALUES ('10', '1', '1', '1', '1', '3', '20', '1485820800000', '1485835200000', '已取消', '1487727717863', '');
 
 -- ----------------------------
 -- Table structure for user_review
@@ -454,6 +516,7 @@ CREATE TABLE `user_review` (
   `id_stadium` int(11) DEFAULT NULL,
   `review` longtext,
   `score` varchar(45) NOT NULL,
+  `timestamp` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
@@ -467,14 +530,14 @@ CREATE TABLE `user_review` (
 -- ----------------------------
 -- Records of user_review
 -- ----------------------------
-INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4');
-INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5');
-INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3');
-INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5');
-INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5');
-INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5');
-INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4');
-INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5');
+INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4', '1487756755969');
+INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5', '1487756755969');
+INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3', '1487756755969');
+INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5', '1487756755969');
+INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5', '1487756755969');
+INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5', '1487756755969');
+INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4', '1487756755969');
+INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5', '1487756755969');
 
 -- ----------------------------
 -- Table structure for user_stadium
@@ -495,7 +558,7 @@ CREATE TABLE `user_stadium` (
   CONSTRAINT `ref_user_stadium_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium
@@ -506,6 +569,7 @@ INSERT INTO `user_stadium` VALUES ('8', '1', '4', '4', '1485302400000', '已使�
 INSERT INTO `user_stadium` VALUES ('9', '1', '1', '1', '1485302400000', '已使用');
 INSERT INTO `user_stadium` VALUES ('10', '1', '1', '5', '1485302700000', '待使用');
 INSERT INTO `user_stadium` VALUES ('13', '1', '1', '9', '1486643232629', '待使用');
+INSERT INTO `user_stadium` VALUES ('14', '1', '1', '10', '1487727717863', '待使用');
 
 -- ----------------------------
 -- Table structure for user_stadium_recommend
