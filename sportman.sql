@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-22 23:52:03
+Date: 2017-02-23 23:47:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -123,9 +123,9 @@ INSERT INTO `activity_reviewfeature` VALUES ('2', '1', '服务态度好', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('3', '1', '环境不错', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('4', '1', '位置好找', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('5', '1', '交通方便', '1');
-INSERT INTO `activity_reviewfeature` VALUES ('6', '1', '停车方便', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('6', '4', '停车方便', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('7', '1', '场地新', '1');
-INSERT INTO `activity_reviewfeature` VALUES ('8', '1', '性价比高', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('8', '4', '性价比高', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('9', '1', '停车方便', '1');
 
 -- ----------------------------
@@ -525,7 +525,7 @@ CREATE TABLE `user_review` (
   CONSTRAINT `ref_user_review_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_review
