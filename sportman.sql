@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-02-23 23:47:22
+Date: 2017-02-26 11:28:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,7 +47,7 @@ CREATE TABLE `activity` (
 INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '海珠区', '花城广场（起点）', '100', '1485139399979', '30', '12', '广州体育局', '广州市天河区天河路299号天河体育中心', '1', '-7', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '1485139399979', '20', '1', '广州体育局', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '0', '1', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '0', '4', '12345678910', 'www.gzmarathon.com');
 INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
 
 -- ----------------------------
@@ -113,20 +113,24 @@ CREATE TABLE `activity_reviewfeature` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_activity_reviewfeature_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of activity_reviewfeature
 -- ----------------------------
-INSERT INTO `activity_reviewfeature` VALUES ('1', '1', '场地干净', '1');
-INSERT INTO `activity_reviewfeature` VALUES ('2', '1', '服务态度好', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('1', '1', '场地干净', '2');
+INSERT INTO `activity_reviewfeature` VALUES ('2', '1', '服务态度好', '2');
 INSERT INTO `activity_reviewfeature` VALUES ('3', '1', '环境不错', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('4', '1', '位置好找', '1');
 INSERT INTO `activity_reviewfeature` VALUES ('5', '1', '交通方便', '1');
-INSERT INTO `activity_reviewfeature` VALUES ('6', '4', '停车方便', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('6', '4', '停车方便', '3');
 INSERT INTO `activity_reviewfeature` VALUES ('7', '1', '场地新', '1');
-INSERT INTO `activity_reviewfeature` VALUES ('8', '4', '性价比高', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('8', '4', '性价比高', '2');
 INSERT INTO `activity_reviewfeature` VALUES ('9', '1', '停车方便', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('12', '4', 'new', '1');
+INSERT INTO `activity_reviewfeature` VALUES ('14', '4', '场地新', '3');
+INSERT INTO `activity_reviewfeature` VALUES ('15', '4', '不错不错', '2');
+INSERT INTO `activity_reviewfeature` VALUES ('16', '4', '棒棒哒', '1');
 
 -- ----------------------------
 -- Table structure for search_activity_hot
@@ -184,7 +188,7 @@ CREATE TABLE `stadium` (
 -- ----------------------------
 -- Records of stadium
 -- ----------------------------
-INSERT INTO `stadium` VALUES ('1', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '4', '广州市海珠区万寿素社街48号', '1', '1', '1', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
+INSERT INTO `stadium` VALUES ('1', '胜利运动场（万寿路店）', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/tabletenis-star.png', '乒乓球，羽毛球', '08:00 - 22:00', '海珠区', '9', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '4', '广州市海珠区万寿素社街48号', '1', '1', '2', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
 INSERT INTO `stadium` VALUES ('2', '广州市射击射箭运动管理中心', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-stadium.png', '台球、射箭、射击', '08:00 - 19:00', '天河区', '199', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '2', '广州市海珠区万寿素社街48号', '1', '1', '1', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
 INSERT INTO `stadium` VALUES ('3', '杰冠真人CS野战基地', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/cs-stadium.png', '仿真枪机野战', '08:00 - 18:00', '海珠区', '299', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '1', '广州市海珠区万寿素社街48号', '0', '0', '1', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
 INSERT INTO `stadium` VALUES ('4', '大世界保龄球馆', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-post.png', 'http://ok7pzw2ak.bkt.clouddn.com/bowling-stadium.png', '保龄球', '08:00 - 22:00', '海珠区', '99', 'http://ok7pzw2ak.bkt.clouddn.com/stadium-hostavatar.png', '3.5', '广州市海珠区万寿素社街48号', '0', '0', '0', '12345678910', '', '免费提供无线WIFI+-+免费提供30个停车位+-+可租购用具');
@@ -253,20 +257,21 @@ CREATE TABLE `stadium_reviewfeature` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_stadium_reviewfeature_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stadium_reviewfeature
 -- ----------------------------
-INSERT INTO `stadium_reviewfeature` VALUES ('1', '1', '场地干净', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('1', '1', '场地干净', '2');
 INSERT INTO `stadium_reviewfeature` VALUES ('2', '1', '服务态度好', '1');
 INSERT INTO `stadium_reviewfeature` VALUES ('3', '1', '环境不错', '1');
-INSERT INTO `stadium_reviewfeature` VALUES ('4', '1', '位置好找', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('4', '1', '位置好找', '2');
 INSERT INTO `stadium_reviewfeature` VALUES ('5', '1', '交通方便', '1');
 INSERT INTO `stadium_reviewfeature` VALUES ('6', '1', '停车方便', '1');
-INSERT INTO `stadium_reviewfeature` VALUES ('7', '1', '场地新', '1');
-INSERT INTO `stadium_reviewfeature` VALUES ('8', '1', '性价比高', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('7', '1', '场地新', '2');
+INSERT INTO `stadium_reviewfeature` VALUES ('8', '1', '性价比高', '2');
 INSERT INTO `stadium_reviewfeature` VALUES ('9', '1', '停车方便', '1');
+INSERT INTO `stadium_reviewfeature` VALUES ('10', '1', '测试新标签', '1');
 
 -- ----------------------------
 -- Table structure for stadium_tradedetail
@@ -313,6 +318,7 @@ CREATE TABLE `user` (
   `email` varchar(255) DEFAULT NULL,
   `mobile` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `socialbg` varchar(500) DEFAULT NULL,
   `timestamp` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
@@ -323,20 +329,20 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'a', 'pwd', 'spmid_a', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('7', 'b', 'pwd', 'spmid_b', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('8', 'c', 'pwd', 'spmid_c', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('9', 'd', 'pwd', 'spmid_d', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('10', 'e', 'pwd', 'spmid_e', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('11', 'f', 'pwd', 'spmid_f', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('12', 'g', 'pwd', 'spmid_g', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('13', 'h', 'pwd', 'spmid_h', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('14', 'i', 'pwd', 'spmid_i', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('15', 'j', 'pwd', 'spmid_j', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('16', 'k', 'pwd', 'spmid_k', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', '1485060433587');
-INSERT INTO `user` VALUES ('17', 'l', 'pwd_2', 'spmid_l', null, null, null, null, null, '1485084733105');
-INSERT INTO `user` VALUES ('18', 'm', 'pwd', null, null, null, null, null, null, '1485085059696');
-INSERT INTO `user` VALUES ('19', 'n', 'pwd', null, null, null, null, null, null, '1485085101433');
+INSERT INTO `user` VALUES ('1', 'a', 'pwd', 'spmid_a', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('7', 'b', 'pwd', 'spmid_b', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('8', 'c', 'pwd', 'spmid_c', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('9', 'd', 'pwd', 'spmid_d', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('10', 'e', 'pwd', 'spmid_e', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('11', 'f', 'pwd', 'spmid_f', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('12', 'g', 'pwd', 'spmid_g', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('13', 'h', 'pwd', 'spmid_h', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('14', 'i', 'pwd', 'spmid_i', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('15', 'j', 'pwd', 'spmid_j', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('16', 'k', 'pwd', 'spmid_k', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
+INSERT INTO `user` VALUES ('17', 'l', 'pwd_2', 'spmid_l', null, null, null, null, null, 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485084733105');
+INSERT INTO `user` VALUES ('18', 'm', 'pwd', null, null, null, null, null, null, null, '1485085059696');
+INSERT INTO `user` VALUES ('19', 'n', 'pwd', null, null, null, null, null, null, null, '1485085101433');
 
 -- ----------------------------
 -- Table structure for user_activity
@@ -525,19 +531,100 @@ CREATE TABLE `user_review` (
   CONSTRAINT `ref_user_review_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_review_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_review
 -- ----------------------------
 INSERT INTO `user_review` VALUES ('1', '1', '1', null, 'asdqwesasd', '4', '1487756755969');
 INSERT INTO `user_review` VALUES ('2', '1', '2', null, 'btrw3hrew', '2.5', '1487756755969');
-INSERT INTO `user_review` VALUES ('3', '1', null, '1', 'adsqwe', '3', '1487756755969');
-INSERT INTO `user_review` VALUES ('4', '1', null, '2', 'ty4yujewr', '1.5', '1487756755969');
 INSERT INTO `user_review` VALUES ('8', '1', '3', null, 'hvbeuiwyiu', '5', '1487756755969');
 INSERT INTO `user_review` VALUES ('9', '1', null, '3', 'hvbeuiwyiu', '5', '1487756755969');
-INSERT INTO `user_review` VALUES ('10', '1', null, '5', 'asjhdhbesbytrrtrty', '4', '1487756755969');
-INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'hvbeuiwyiu', '5', '1487756755969');
+INSERT INTO `user_review` VALUES ('11', '1', '4', null, 'qwheiuhuivchuiqhwuieb', '5', '148799150717');
+INSERT INTO `user_review` VALUES ('13', '1', null, '1', 'qweqwvawerqweqea', '5', '1487992445977');
+
+-- ----------------------------
+-- Table structure for user_socialcircle
+-- ----------------------------
+DROP TABLE IF EXISTS `user_socialcircle`;
+CREATE TABLE `user_socialcircle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `timestamp` varchar(255) NOT NULL,
+  `locate` varchar(255) DEFAULT NULL,
+  `publish` longtext NOT NULL,
+  `likecount` int(11) NOT NULL,
+  `commentcount` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_user` (`id_user`) USING BTREE,
+  CONSTRAINT `ref_user_socialcircle_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_socialcircle
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for user_socialcomment
+-- ----------------------------
+DROP TABLE IF EXISTS `user_socialcomment`;
+CREATE TABLE `user_socialcomment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_socialcircle` int(11) NOT NULL,
+  `timestamp` varchar(255) NOT NULL,
+  `locate` varchar(255) DEFAULT NULL,
+  `comment` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_user` (`id_user`) USING BTREE,
+  KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
+  CONSTRAINT `ref_user_socialcomment_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ref_user_socialcomment_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_socialcomment
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for user_socialimage
+-- ----------------------------
+DROP TABLE IF EXISTS `user_socialimage`;
+CREATE TABLE `user_socialimage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_socialcircle` int(11) NOT NULL,
+  `imgsrc` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
+  CONSTRAINT `ref_user_socialimage_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_socialimage
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for user_sociallike
+-- ----------------------------
+DROP TABLE IF EXISTS `user_sociallike`;
+CREATE TABLE `user_sociallike` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_socialcircle` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_user` (`id_user`) USING BTREE,
+  KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
+  CONSTRAINT `ref_user_sociallike_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ref_user_sociallike_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_sociallike
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for user_stadium
