@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-05-14 23:39:50
+Date: 2017-05-16 00:03:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,11 +46,11 @@ CREATE TABLE `activity` (
 -- ----------------------------
 -- Records of activity
 -- ----------------------------
-INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '海珠区', '花城广场（起点）', '100', '1485139399979', '30', '28', '广州体育局', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '1', '-7', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '1485139399979', '20', '3', '广州体育局', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '0', '4', '12345678910', 'www.gzmarathon.com');
-INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '1485139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('1', '2016广州马拉松', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '海珠区', '花城广场（起点）', '100', '2089139399979', '30', '28', '广州体育局', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '1', '-7', '1', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('2', '白云山野战场畅玩', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/shot-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/marason-icon.png', '白云区', '白云山野战场', '100', '2089139399979', '20', '3', '广州体育局', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('3', '轮滑逛街活动', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/skip-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '海珠区', '海珠广场', '100', '2089139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '1', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('4', '彩色跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云山', '白云山', '100', '2089139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '0', '4', '12345678910', 'www.gzmarathon.com');
+INSERT INTO `activity` VALUES ('5', '轮荧光夜跑', 'http://ok7pzw2ak.bkt.clouddn.com/activitypost.png', 'http://ok7pzw2ak.bkt.clouddn.com/colorrunning-thumbnail.png', 'http://ok7pzw2ak.bkt.clouddn.com/adidas.png', '白云区', '白云山', '9.9', '2089139399979', '10', '2', '阿迪王专业体育用具', '广州市天河区天河路299号天河体育中心', '1485137399979', '1485141399979', '0', '1', '0', '12345678910', 'www.gzmarathon.com');
 
 -- ----------------------------
 -- Table structure for activity_banner
@@ -364,12 +364,12 @@ CREATE TABLE `user_activity` (
   CONSTRAINT `ref_user_activity_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity
 -- ----------------------------
-INSERT INTO `user_activity` VALUES ('19', '1', '1', '2', '1494755112518', '审核中');
+INSERT INTO `user_activity` VALUES ('19', '1', '1', '2', '1494755112518', '已结束');
 INSERT INTO `user_activity` VALUES ('20', '1', '2', '3', '1494755326643', '审核中');
 
 -- ----------------------------
@@ -404,7 +404,7 @@ CREATE TABLE `user_activity_star` (
   KEY `id_activity` (`id_activity`) USING BTREE,
   CONSTRAINT `ref_user_activity_star_col_id_activity` FOREIGN KEY (`id_activity`) REFERENCES `activity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_activity_star_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_activity_star
@@ -568,11 +568,14 @@ CREATE TABLE `user_socialcomment` (
   KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
   CONSTRAINT `ref_user_socialcomment_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_socialcomment_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_socialcomment
 -- ----------------------------
+INSERT INTO `user_socialcomment` VALUES ('1', '1', '1', '1494855517520', '中国', '测试回复');
+INSERT INTO `user_socialcomment` VALUES ('2', '1', '1', '1494855865753', '中国', 'Array');
+INSERT INTO `user_socialcomment` VALUES ('3', '1', '1', '1494856264400', '中国', 'neibucesgihuifu');
 
 -- ----------------------------
 -- Table structure for user_socialimage
@@ -640,7 +643,7 @@ CREATE TABLE `user_stadium` (
   CONSTRAINT `ref_user_stadium_col_id_payment` FOREIGN KEY (`id_payment`) REFERENCES `user_payment_stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium
@@ -659,7 +662,7 @@ CREATE TABLE `user_stadium_recommend` (
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_user_stadium_recommend_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_recommend_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium_recommend
@@ -678,7 +681,7 @@ CREATE TABLE `user_stadium_star` (
   KEY `id_stadium` (`id_stadium`) USING BTREE,
   CONSTRAINT `ref_user_stadium_star_col_id_stadium` FOREIGN KEY (`id_stadium`) REFERENCES `stadium` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_stadium_star_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_stadium_star
