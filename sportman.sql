@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-05-16 00:03:53
+Date: 2017-05-18 09:57:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -331,20 +331,20 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'a', 'pwda', 'spmid_a', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('7', 'b', 'pwd', 'spmid_b', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('8', 'c', 'pwd', 'spmid_c', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('9', 'd', 'pwd', 'spmid_d', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('10', 'e', 'pwd', 'spmid_e', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('11', 'f', 'pwd', 'spmid_f', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('12', 'g', 'pwd', 'spmid_g', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('13', 'h', 'pwd', 'spmid_h', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('14', 'i', 'pwd', 'spmid_i', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('15', 'j', 'pwd', 'spmid_j', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('16', 'k', 'pwd', 'spmid_k', 'http://i1.hdslb.com/bfs/face/96c4fbb4a280366cc4f431038be004abd7ca983b.jpg@75Q.webp', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485060433587');
-INSERT INTO `user` VALUES ('17', 'l', 'pwd_2', 'spmid_l', null, null, null, null, null, 'http://ok7pzw2ak.bkt.clouddn.com/user_social_bg.png', '1485084733105');
-INSERT INTO `user` VALUES ('18', 'm', 'pwd', null, null, null, null, null, null, null, '1485085059696');
-INSERT INTO `user` VALUES ('19', 'n', 'pwd', null, null, null, null, null, null, null, '1485085101433');
+INSERT INTO `user` VALUES ('1', 'a', 'pwda', 'spmid_a', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国-广东-广州', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('7', 'b', 'pwd', 'spmid_b', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('8', 'c', 'pwd', 'spmid_c', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('9', 'd', 'pwd', 'spmid_d', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('10', 'e', 'pwd', 'spmid_e', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('11', 'f', 'pwd', 'spmid_f', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('12', 'g', 'pwd', 'spmid_g', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('13', 'h', 'pwd', 'spmid_h', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('14', 'i', 'pwd', 'spmid_i', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('15', 'j', 'pwd', 'spmid_j', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'fm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('16', 'k', 'pwd', 'spmid_k', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', 'm', 'hennzr@gmail.com', '665396', '中国', 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485060433587');
+INSERT INTO `user` VALUES ('17', 'l', 'pwd_2', 'spmid_l', 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', null, null, null, null, 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485084733105');
+INSERT INTO `user` VALUES ('18', 'm', 'pwd', null, 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', null, null, null, null, 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485085059696');
+INSERT INTO `user` VALUES ('19', 'n', 'pwd', null, 'http://ok7pzw2ak.bkt.clouddn.com/14950341743822vdJNgyati49777674_p0.jpg', null, null, null, null, 'http://ok7pzw2ak.bkt.clouddn.com/1495033806935ogrjkPRDAV60848489_p1.jpg', '1485085101433');
 
 -- ----------------------------
 -- Table structure for user_activity
@@ -543,13 +543,23 @@ CREATE TABLE `user_socialcircle` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_user` (`id_user`) USING BTREE,
   CONSTRAINT `ref_user_socialcircle_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_socialcircle
 -- ----------------------------
-INSERT INTO `user_socialcircle` VALUES ('1', '1', '1488009540000', '中国·深圳', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ellit anim id est laborum. labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ellit anim id est laborum.', '11', '99');
-INSERT INTO `user_socialcircle` VALUES ('2', '7', '1488009540000', '中国·广州', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ', '100', '9');
+INSERT INTO `user_socialcircle` VALUES ('1', '1', '1488009540000', '中国·深圳', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ellit anim id est laborum. labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ellit anim id est laborum.', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('2', '7', '1488009540000', '中国·广州', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('4', '1', '1494946977879', '中国-广东-广州', 'trjtyujytu', '1', '2');
+INSERT INTO `user_socialcircle` VALUES ('5', '1', '1495021640756', '中国-广东-广州', '新增1条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('6', '1', '149502176066', '中国-广东-广州', '新增第2条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('7', '1', '1495021829176', '中国-广东-广州', '新增第3条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('8', '1', '1495022301391', '中国-广东-广州', '新增第4条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('9', '1', '1495022440949', '中国-广东-广州', '新增第5条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('10', '1', '1495022474657', '中国-广东-广州', '新增第6条', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('11', '1', '1495022515582', '中国-广东-广州', '新增第7条', '1', '1');
+INSERT INTO `user_socialcircle` VALUES ('12', '1', '1495030511755', '中国-广东-广州', '新增第8条试试', '0', '0');
+INSERT INTO `user_socialcircle` VALUES ('13', '1', '1495030594574', '中国-广东-广州', '新增第9条', '0', '0');
 
 -- ----------------------------
 -- Table structure for user_socialcomment
@@ -573,9 +583,9 @@ CREATE TABLE `user_socialcomment` (
 -- ----------------------------
 -- Records of user_socialcomment
 -- ----------------------------
-INSERT INTO `user_socialcomment` VALUES ('1', '1', '1', '1494855517520', '中国', '测试回复');
-INSERT INTO `user_socialcomment` VALUES ('2', '1', '1', '1494855865753', '中国', 'Array');
-INSERT INTO `user_socialcomment` VALUES ('3', '1', '1', '1494856264400', '中国', 'neibucesgihuifu');
+INSERT INTO `user_socialcomment` VALUES ('1', '1', '4', '1495014213189', '中国', '哈哈哈哈哈哈哈哈哈');
+INSERT INTO `user_socialcomment` VALUES ('2', '1', '4', '1495014230911', '中国', '快速回复罗');
+INSERT INTO `user_socialcomment` VALUES ('3', '1', '11', '149502264574', '中国', '给新增的第7条加个回复');
 
 -- ----------------------------
 -- Table structure for user_socialimage
@@ -589,18 +599,30 @@ CREATE TABLE `user_socialimage` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
   CONSTRAINT `ref_user_socialimage_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_socialimage
 -- ----------------------------
-INSERT INTO `user_socialimage` VALUES ('1', '1', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('2', '1', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('3', '1', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('4', '1', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('5', '1', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('6', '2', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
-INSERT INTO `user_socialimage` VALUES ('7', '2', 'http://ok7pzw2ak.bkt.clouddn.com/social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('1', '1', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('2', '1', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('3', '1', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('4', '1', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('5', '1', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('6', '2', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('7', '2', 'social-imglist-1.png');
+INSERT INTO `user_socialimage` VALUES ('10', '4', '1494946977879$1!I!AyO5g50066720_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('11', '4', '1494946977879$I&YU4bR&S60848489_p1.jpg');
+INSERT INTO `user_socialimage` VALUES ('12', '5', '1495021640756HWg664C4oC49797390_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('13', '6', '149502176066ksv72tz&vF50047468_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('14', '7', '1495021829176ghm9Xixm%23w50103489_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('15', '8', '1495022301391%23kam1S1ivM50729872_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('16', '9', '1495022440949oGWncpxFeV50034977_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('17', '10', '14950224746575LibaqMFRQ49777674_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('18', '11', '1495022515582ukNKNE3lwA49797390_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('19', '11', '1495022515582dn0Cn27I9349820564_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('20', '12', '1495030511755hswjYEwGXh53623817_p0.jpg');
+INSERT INTO `user_socialimage` VALUES ('21', '13', '1495030594574QBbWdq8KRZ50729872_p0.jpg');
 
 -- ----------------------------
 -- Table structure for user_sociallike
@@ -617,12 +639,13 @@ CREATE TABLE `user_sociallike` (
   KEY `id_socialcircle` (`id_socialcircle`) USING BTREE,
   CONSTRAINT `ref_user_sociallike_col_id_socialcircle` FOREIGN KEY (`id_socialcircle`) REFERENCES `user_socialcircle` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ref_user_sociallike_col_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_sociallike
 -- ----------------------------
-INSERT INTO `user_sociallike` VALUES ('6', '1', '2', '1494774465992');
+INSERT INTO `user_sociallike` VALUES ('7', '1', '4', '1495013527286');
+INSERT INTO `user_sociallike` VALUES ('8', '1', '11', '1495022629712');
 
 -- ----------------------------
 -- Table structure for user_stadium
